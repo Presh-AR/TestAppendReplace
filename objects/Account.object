@@ -1,5 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Active__c</fullName>
+        <description>Test 08:05</description>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>BIG</fullName>
+                    <default>false</default>
+                    <label>BIG</label>
+                </value>
+                <value>
+                    <fullName>small</fullName>
+                    <default>false</default>
+                    <label>small</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CustomerPriority__c</fullName>
+        <defaultValue>&apos;1&apos;</defaultValue>
+        <description>gsefg</description>
+        <externalId>false</externalId>
+        <inlineHelpText>sdfgsdf</inlineHelpText>
+        <label>Customer Priority</label>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Active__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>High</fullName>
+                    <color>#33FFFF</color>
+                    <default>true</default>
+                    <label>High</label>
+                </value>
+                <value>
+                    <fullName>Low</fullName>
+                    <default>false</default>
+                    <label>Low</label>
+                </value>
+                <value>
+                    <fullName>Medium</fullName>
+                    <default>false</default>
+                    <label>Medium</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>No</controllingFieldValue>
+                <controllingFieldValue>small</controllingFieldValue>
+                <valueName>High</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>Low</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BIG</controllingFieldValue>
+                <valueName>Medium</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
     <recordTypes>
         <fullName>RT1</fullName>
         <active>true</active>
@@ -24,6 +107,32 @@
             </values>
             <values>
                 <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Active__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CustomerPriority__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
